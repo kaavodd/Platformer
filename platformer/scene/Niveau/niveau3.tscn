@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://tiles/decor_desert.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/objet/piece.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/objet/platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://img/background/BG.png" type="Texture" id=5]
+[ext_resource path="res://scene/ennemi/oeil.tscn" type="PackedScene" id=6]
+[ext_resource path="res://script/scene.gd" type="Script" id=7]
+[ext_resource path="res://scene/objet/finir_niveau.tscn" type="PackedScene" id=8]
+[ext_resource path="res://tiles/tiles_desert.tres" type="TileSet" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1916, 10 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "animation"
+length = 0.2
+loop = true
+
+[node name="Niveau3" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Tile_desert" type="TileMap" parent="."]
+tile_set = ExtResource( 10 )
+format = 1
+tile_data = PoolIntArray( -327682, 0, 0, -393216, 2, 0, -196610, 3, 0, -262144, 5, 0, -65538, 3, 0, -131072, 5, 0, -131003, 0, 0, -131001, 2, 0, 65534, 3, 0, 0, 5, 0, 69, 3, 0, 71, 5, 0, 196606, 3, 0, 131072, 5, 0, 131141, 3, 0, 131143, 5, 0, 327678, 3, 0, 262144, 5, 0, 262213, 3, 0, 262215, 5, 0, 458750, 3, 0, 393216, 5, 0, 393230, 0, 0, 393232, 2, 0, 393237, 13, 0, 393239, 14, 0, 393241, 15, 0, 393245, 0, 0, 393247, 2, 0, 393285, 3, 0, 393287, 5, 0, 589822, 3, 0, 524288, 5, 0, 524300, 0, 0, 524302, 7, 0, 524304, 5, 0, 524317, 3, 0, 524319, 9, 0, 524321, 2, 0, 524353, 0, 0, 524355, 6, 0, 524357, 7, 0, 524359, 5, 0, 720894, 3, 0, 655360, 5, 0, 655370, 0, 0, 655372, 7, 0, 655374, 4, 0, 655376, 5, 0, 655389, 3, 0, 655391, 4, 0, 655393, 9, 0, 655395, 2, 0, 655421, 0, 0, 655423, 6, 0, 655425, 7, 0, 655427, 4, 0, 655429, 4, 0, 655431, 5, 0, 851966, 3, 0, 786432, 9, 0, 786434, 1, 0, 786436, 1, 0, 786438, 1, 0, 786440, 6, 0, 786442, 7, 0, 786444, 4, 0, 786446, 4, 0, 786448, 5, 0, 786453, 0, 0, 786455, 1, 0, 786457, 1, 0, 786459, 6, 0, 786461, 7, 0, 786463, 4, 0, 786465, 4, 0, 786467, 9, 0, 786469, 10, 0, 786471, 1, 0, 786473, 1, 0, 786475, 1, 0, 786477, 1, 0, 786479, 2, 0, 786485, 0, 0, 786487, 1, 0, 786489, 1, 0, 786491, 6, 0, 786493, 7, 0, 786495, 4, 0, 786497, 4, 0, 786499, 4, 0, 786501, 4, 0, 786503, 5, 0, 983038, 11, 0, 917504, 8, 0, 917506, 8, 0, 917508, 8, 0, 917510, 8, 0, 917512, 8, 0, 917514, 8, 0, 917516, 8, 0, 917518, 8, 0, 917520, 12, 0, 917525, 11, 0, 917527, 8, 0, 917529, 8, 0, 917531, 8, 0, 917533, 8, 0, 917535, 8, 0, 917537, 8, 0, 917539, 8, 0, 917541, 8, 0, 917543, 8, 0, 917545, 8, 0, 917547, 8, 0, 917549, 8, 0, 917551, 12, 0, 917557, 11, 0, 917559, 8, 0, 917561, 8, 0, 917563, 8, 0, 917565, 8, 0, 917567, 8, 0, 917569, 8, 0, 917571, 8, 0, 917573, 8, 0, 917575, 12, 0, 1769489, 0, 0, 1769491, 1, 0, 1769493, 1, 0, 1769495, 1, 0, 1769497, 1, 0, 1769499, 1, 0, 1769501, 1, 0, 1769503, 1, 0, 1769505, 1, 0, 1769507, 1, 0, 1769509, 1, 0, 1769511, 1, 0, 1769513, 1, 0, 1769515, 1, 0, 1769517, 1, 0, 1769519, 2, 0, 1900561, 11, 0, 1900563, 8, 0, 1900565, 8, 0, 1900567, 8, 0, 1900569, 8, 0, 1900571, 8, 0, 1900573, 8, 0, 1900575, 8, 0, 1900577, 8, 0, 1900579, 8, 0, 1900581, 8, 0, 1900583, 8, 0, 1900585, 8, 0, 1900587, 8, 0, 1900589, 8, 0, 1900591, 12, 0 )
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+motion_mirroring = Vector2( 3450, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -4, -467 )
+scale = Vector2( 2.72344, 4.89732 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 352, 1280, 608 )
+
+[node name="platform" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3229, 1732 )
+scale = Vector2( 1.5, 1.5 )
+contact_monitor = true
+time = 4
+longueur = Vector2( 0, -1000 )
+
+[node name="platform2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1751, 725 )
+scale = Vector2( 1.5, 1.5 )
+contact_monitor = true
+longueur = Vector2( 0, -300 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 235, 725 )
+
+[node name="objet" type="Node2D" parent="."]
+scale = Vector2( 3, 3 )
+
+[node name="piece3" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 920.333, 563 )
+scale = Vector2( 1, 1 )
+
+[node name="piece" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 898.333, 567 )
+scale = Vector2( 1, 1 )
+
+[node name="piece10" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 1016.67, 563 )
+scale = Vector2( 1, 1 )
+
+[node name="piece9" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 1083, 399 )
+scale = Vector2( 1, 1 )
+
+[node name="piece8" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 656, 505.667 )
+scale = Vector2( 1, 1 )
+
+[node name="piece7" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 631.667, 511 )
+scale = Vector2( 1, 1 )
+
+[node name="piece6" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 613.667, 505.667 )
+scale = Vector2( 1, 1 )
+
+[node name="piece5" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 635.667, 60.3333 )
+scale = Vector2( 1, 1 )
+
+[node name="piece4" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 678.333, 60.3333 )
+scale = Vector2( 1, 1 )
+
+[node name="piece2" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 660, 118.667 )
+scale = Vector2( 1, 1 )
+
+[node name="piece11" parent="objet" instance=ExtResource( 3 )]
+position = Vector2( 536.667, 227.667 )
+scale = Vector2( 1, 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1980, 2301 )
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="niveau_completed" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4374, 448 )
+scale = Vector2( 2, 2 )
+
+[node name="oeil" parent="." instance=ExtResource( 6 )]
+
+[node name="oeil4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2035, -287 )
+
+[node name="oeil2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3976, 150 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/animation = SubResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 4374, 448 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -589904, 26, 0, -196702, 28, 0, -131178, 19, 0, 130960, 19, 0, 131002, 19, 0, 131066, 30, 0, 262134, 24, 0, 393100, 19, 0, 393150, 19, 0, 393204, 19, 0, 524168, 9, 0, 524238, 18, 0, 589692, 27, 0, 589764, 25, 0, 655302, 22, 0, 655342, 21, 0, 2162606, 26, 0, 2490271, 20, 0, 2490316, 24, 0, 2490325, 18, 0, 2555849, 25, 0, 2621359, 22, 0 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="niveau_completed" to="player" method="_on_niveau_completed_body_entered"]

@@ -1,0 +1,145 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://tiles/tiles01.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/player/Joueur.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/ennemi/ennemi.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tiles/tiles_desert.tres" type="TileSet" id=4]
+[ext_resource path="res://img/background/BG.png" type="Texture" id=5]
+[ext_resource path="res://scene/ennemi/monstre_tournant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/objet/platform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/objet/piece.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/objet/Potion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/objet/finir_niveau.tscn" type="PackedScene" id=10]
+[ext_resource path="res://script/scene.gd" type="Script" id=11]
+[ext_resource path="res://tiles/decor_desert.tres" type="TileSet" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1225.5, 15.5 )
+
+[node name="Niveau2" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="tile_desert" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( -524294, 0, 0, -524292, 2, 0, -589768, 0, 0, -589766, 2, 0, -393222, 3, 0, -393220, 5, 0, -458696, 3, 0, -458694, 5, 0, -262150, 3, 0, -262148, 5, 0, -327624, 3, 0, -327622, 5, 0, -131078, 3, 0, -131076, 5, 0, -196605, 13, 0, -196603, 14, 0, -196601, 14, 0, -196599, 14, 0, -196597, 14, 0, -196595, 15, 0, -196592, 13, 0, -196590, 14, 0, -196588, 14, 0, -196586, 14, 0, -196584, 14, 0, -196582, 15, 0, -196552, 3, 0, -196550, 5, 0, -6, 3, 0, -4, 5, 0, -65488, 0, 0, -65486, 1, 0, -65484, 1, 0, -65482, 6, 0, -65480, 7, 0, -65478, 5, 0, 28, 0, 0, 30, 1, 0, 32, 1, 0, 34, 1, 0, 36, 2, 0, 131066, 3, 0, 131068, 5, 0, 65584, 3, 0, 65586, 4, 0, 65588, 4, 0, 65590, 4, 0, 65592, 4, 0, 65594, 5, 0, 131100, 11, 0, 131102, 8, 0, 131104, 8, 0, 131106, 8, 0, 131108, 12, 0, 131112, 0, 0, 131114, 2, 0, 262138, 3, 0, 262140, 9, 0, 262142, 10, 0, 196608, 2, 0, 196656, 3, 0, 196658, 4, 0, 196660, 4, 0, 196662, 4, 0, 196664, 4, 0, 196666, 5, 0, 262146, 13, 0, 262148, 14, 0, 262150, 15, 0, 262184, 3, 0, 262186, 5, 0, 393210, 3, 0, 393212, 4, 0, 393214, 4, 0, 327680, 5, 0, 327689, 13, 0, 327691, 15, 0, 327728, 3, 0, 327730, 4, 0, 327732, 4, 0, 327734, 4, 0, 327736, 4, 0, 327738, 5, 0, 393230, 13, 0, 393232, 14, 0, 393234, 15, 0, 393256, 3, 0, 393258, 5, 0, 524282, 3, 0, 524284, 4, 0, 524286, 4, 0, 458752, 5, 0, 458800, 3, 0, 458802, 4, 0, 458804, 4, 0, 458806, 4, 0, 458808, 4, 0, 458810, 5, 0, 524324, 13, 0, 524326, 15, 0, 524328, 11, 0, 524330, 12, 0, 655354, 3, 0, 655356, 4, 0, 655358, 4, 0, 589824, 5, 0, 589832, 0, 0, 589834, 2, 0, 589847, 0, 0, 589849, 1, 0, 589851, 1, 0, 589853, 1, 0, 589855, 2, 0, 589872, 3, 0, 589874, 4, 0, 589876, 4, 0, 589878, 4, 0, 589880, 4, 0, 589882, 5, 0, 786426, 3, 0, 786428, 4, 0, 786430, 4, 0, 720896, 9, 0, 720898, 10, 0, 720900, 1, 0, 720902, 6, 0, 720904, 7, 0, 720906, 5, 0, 720909, 13, 0, 720911, 15, 0, 720915, 0, 0, 720917, 6, 0, 720919, 7, 0, 720921, 4, 0, 720923, 4, 0, 720925, 4, 0, 720927, 5, 0, 720944, 11, 0, 720946, 8, 0, 720948, 8, 0, 720950, 8, 0, 720952, 8, 0, 720954, 12, 0, 917498, 3, 0, 917500, 4, 0, 917502, 4, 0, 851968, 4, 0, 851970, 4, 0, 851972, 4, 0, 851974, 4, 0, 851976, 4, 0, 851978, 5, 0, 851987, 11, 0, 851989, 8, 0, 851991, 8, 0, 851993, 8, 0, 851995, 8, 0, 851997, 8, 0, 851999, 12, 0, 1048570, 11, 0, 1048572, 8, 0, 1048574, 8, 0, 983040, 8, 0, 983042, 8, 0, 983044, 8, 0, 983046, 8, 0, 983048, 8, 0, 983050, 12, 0, 1179696, 0, 0, 1179698, 1, 0, 1179700, 1, 0, 1179702, 2, 0, 1310768, 11, 0, 1310770, 8, 0, 1310772, 8, 0, 1310774, 12, 0 )
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+motion_mirroring = Vector2( 2500, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -389, -835 )
+scale = Vector2( 1.96953, 4.59766 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 448, 1280, 512 )
+
+[node name="les_platforms" type="Node2D" parent="."]
+
+[node name="platform" parent="les_platforms" instance=ExtResource( 7 )]
+position = Vector2( 2981, 1128 )
+longueur = Vector2( 0, -1300 )
+
+[node name="platform2" parent="les_platforms" instance=ExtResource( 7 )]
+position = Vector2( 1319, 425 )
+longueur = Vector2( 200, 0 )
+
+[node name="platform3" parent="les_platforms" instance=ExtResource( 7 )]
+position = Vector2( 35, -200 )
+longueur = Vector2( 0, 400 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 658 )
+
+[node name="groupe_ennemi" type="Node2D" parent="."]
+
+[node name="blop" parent="groupe_ennemi" instance=ExtResource( 3 )]
+position = Vector2( 168, 230 )
+
+[node name="blop_2" parent="groupe_ennemi" instance=ExtResource( 3 )]
+position = Vector2( 954, 356 )
+
+[node name="monstre_tournant" parent="groupe_ennemi" instance=ExtResource( 6 )]
+position = Vector2( 1950, 546 )
+
+[node name="monstre_tournant2" parent="groupe_ennemi" instance=ExtResource( 6 )]
+position = Vector2( 2263, -24 )
+
+[node name="monstre_tournant3" parent="groupe_ennemi" instance=ExtResource( 6 )]
+position = Vector2( 1103, -214 )
+
+[node name="item" type="Node2D" parent="."]
+
+[node name="piece" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3436, 1027 )
+
+[node name="piece5" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3436, 1081 )
+
+[node name="piece6" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3436, 1128 )
+
+[node name="piece7" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 2531, 388 )
+
+[node name="piece8" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 253, -214 )
+
+[node name="piece4" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3347, 1081 )
+
+[node name="piece3" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3347, 1129 )
+
+[node name="piece2" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3347, 1027 )
+
+[node name="Potion" parent="item" instance=ExtResource( 9 )]
+position = Vector2( 299, -214 )
+
+[node name="Potion2" parent="item" instance=ExtResource( 9 )]
+position = Vector2( 2676, 112 )
+
+[node name="niveau3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3535, -142 )
+scale = Vector2( 2, 2 )
+input_pickable = false
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"game_over",
+]]
+position = Vector2( 1844, 1519 )
+scale = Vector2( 2, 2 )
+input_pickable = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="CACHE_ennemi" type="TileMap" parent="."]
+visible = false
+position = Vector2( 141, 388 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 48, 48 )
+collision_layer = 0
+collision_mask = 4
+format = 1
+tile_data = PoolIntArray( -655354, 8, 0, -589818, 8, 0, -524282, 8, 0, -458746, 8, 0, -393210, 8, 0, -393193, 4, 0, -327674, 4, 0, -327657, 4, 0, -262138, 4, 0, -262121, 4, 0, -196585, 4, 0, -131064, 4, 0, -131049, 4, 0, -65521, 4, 0, -65513, 8, 0, 15, 4, 0, 589839, 7, 0, 589840, 7, 0, 589841, 7, 0 )
+
+[node name="deco_desert" type="TileMap" parent="."]
+position = Vector2( 1844, 1519 )
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -3932204, 26, 0, -3670023, 11, 0, -3604505, 28, 0, -3538989, 22, 0, -3538975, 22, 0, -3604472, 26, 0, -3407832, 27, 0, -3211264, 22, 0, -3211259, 3, 0, -2883641, 11, 0, -2818109, 24, 0, -2752573, 25, 0, -2162683, 11, 0, -2031656, 16, 0, -2031620, 9, 0, -1769525, 27, 0, -1703981, 21, 0, -917463, 20, 0, -851918, 25, 0, -851917, 22, 0 )
+[connection signal="body_entered" from="niveau3" to="." method="_on_niveau3_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

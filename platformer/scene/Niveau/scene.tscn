@@ -1,0 +1,150 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://tiles/tiles01.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/ennemi/ennemi.tscn" type="PackedScene" id=3]
+[ext_resource path="res://img/background/BG.png" type="Texture" id=4]
+[ext_resource path="res://tiles/tiles_desert.tres" type="TileSet" id=5]
+[ext_resource path="res://scene/ennemi/monstre_tournant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scene/objet/platform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scene/objet/piece.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scene/objet/Potion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scene/objet/finir_niveau.tscn" type="PackedScene" id=10]
+[ext_resource path="res://script/scene.gd" type="Script" id=11]
+[ext_resource path="res://scene/ennemi/oeil.tscn" type="PackedScene" id=12]
+[ext_resource path="res://tiles/decor_desert.tres" type="TileSet" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2440, 10 )
+
+[node name="Niveau_1" type="Node2D"]
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_vertical_guides_": [ 3856.0 ]
+}
+
+[node name="Tiledesert" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -1245188, 0, 0, -1310720, 2, 0, -1179514, 0, 0, -1179510, 2, 0, -983044, 3, 0, -1048576, 5, 0, -1048475, 0, 0, -1048471, 2, 0, -917370, 3, 0, -917366, 5, 0, -720900, 3, 0, -786432, 5, 0, -786331, 3, 0, -786327, 5, 0, -655226, 3, 0, -655222, 5, 0, -458756, 3, 0, -524288, 5, 0, -524241, 0, 0, -524237, 2, 0, -524187, 3, 0, -524183, 5, 0, -393173, 25, 0, -393082, 3, 0, -393078, 5, 0, -327641, 19, 0, -327613, 20, 0, -196612, 3, 0, -262144, 5, 0, -262113, 0, 0, -262109, 1, 0, -262105, 1, 0, -262101, 6, 0, -262097, 7, 0, -262093, 5, 0, -262077, 25, 0, -262043, 3, 0, -262039, 5, 0, -196586, 13, 0, -196582, 15, 0, -131011, 13, 0, -131007, 14, 0, -131003, 15, 0, -130938, 3, 0, -130934, 5, 0, 65532, 3, 0, 0, 5, 0, 17, 19, 0, 31, 11, 0, 35, 8, 0, 39, 8, 0, 43, 8, 0, 47, 8, 0, 51, 5, 0, 73, 0, 0, 77, 2, 0, 101, 3, 0, 105, 5, 0, 65549, 13, 0, 65553, 15, 0, 131206, 3, 0, 131210, 5, 0, 327676, 3, 0, 262144, 5, 0, 262195, 5, 0, 262217, 3, 0, 262221, 9, 0, 262225, 2, 0, 262245, 3, 0, 262249, 5, 0, 262269, 25, 0, 327778, 18, 0, 393220, 13, 0, 393224, 15, 0, 393310, 25, 0, 393334, 0, 0, 393338, 1, 0, 393342, 1, 0, 393346, 6, 0, 393350, 7, 0, 393354, 5, 0, 589820, 3, 0, 524288, 5, 0, 524339, 5, 0, 524361, 3, 0, 524365, 4, 0, 524369, 9, 0, 524373, 1, 0, 524377, 1, 0, 524381, 1, 0, 524385, 6, 0, 524389, 7, 0, 524393, 5, 0, 589836, 13, 0, 589840, 15, 0, 655381, 25, 0, 655478, 11, 0, 655482, 8, 0, 655486, 8, 0, 655490, 8, 0, 655494, 8, 0, 655498, 12, 0, 720928, 19, 0, 851964, 3, 0, 786432, 5, 0, 786452, 13, 0, 786456, 14, 0, 786460, 14, 0, 786464, 14, 0, 786468, 15, 0, 786483, 5, 0, 786505, 11, 0, 786509, 8, 0, 786513, 8, 0, 786517, 8, 0, 786521, 8, 0, 786525, 8, 0, 786529, 8, 0, 786533, 8, 0, 786537, 12, 0, 1114108, 3, 0, 1048576, 5, 0, 1048621, 8, 0, 1048623, 8, 0, 1048627, 12, 0, 1376252, 3, 0, 1310720, 5, 0, 1310748, 0, 0, 1310752, 1, 0, 1310756, 2, 0, 1376276, 18, 0, 1376312, 20, 0, 1376343, 20, 0, 1441875, 25, 0, 1638396, 3, 0, 1572864, 9, 0, 1572868, 10, 0, 1572872, 1, 0, 1572876, 1, 0, 1572880, 1, 0, 1572884, 1, 0, 1572888, 6, 0, 1572892, 7, 0, 1572896, 4, 0, 1572900, 5, 0, 1572909, 0, 0, 1572913, 1, 0, 1572917, 1, 0, 1572921, 1, 0, 1572925, 1, 0, 1572929, 1, 0, 1572933, 1, 0, 1572937, 1, 0, 1572941, 1, 0, 1572944, 1, 0, 1572948, 1, 0, 1572952, 1, 0, 1572956, 1, 0, 1572960, 1, 0, 1572964, 1, 0, 1572968, 2, 0, 1900540, 3, 0, 1835008, 4, 0, 1835012, 4, 0, 1835016, 4, 0, 1835020, 4, 0, 1835024, 4, 0, 1835028, 4, 0, 1835032, 4, 0, 1835036, 4, 0, 1835040, 4, 0, 1835044, 5, 0, 1835053, 3, 0, 1835057, 4, 0, 1835061, 4, 0, 1835065, 4, 0, 1835069, 4, 0, 1835073, 4, 0, 1835077, 4, 0, 1835080, 4, 0, 1835084, 4, 0, 1835088, 4, 0, 1835092, 4, 0, 1835096, 4, 0, 1835100, 4, 0, 1835104, 4, 0, 1835108, 4, 0, 1835112, 5, 0, 2162684, 11, 0, 2097152, 8, 0, 2097156, 8, 0, 2097160, 8, 0, 2097164, 8, 0, 2097168, 8, 0, 2097172, 8, 0, 2097176, 8, 0, 2097180, 8, 0, 2097184, 8, 0, 2097188, 12, 0, 2097197, 11, 0, 2097201, 8, 0, 2097205, 8, 0, 2097209, 8, 0, 2097213, 8, 0, 2097217, 8, 0, 2097221, 8, 0, 2097225, 8, 0, 2097229, 8, 0, 2097233, 8, 0, 2097237, 8, 0, 2097241, 8, 0, 2097245, 8, 0, 2097249, 8, 0, 2097252, 8, 0, 2097256, 12, 0 )
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+motion_mirroring = Vector2( 1835, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -566 )
+scale = Vector2( 1.43516, 2.40313 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 320, 1280, 640 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="Parallax/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -125, 972 )
+scale = Vector2( 3.5875, 17.3594 )
+texture = ExtResource( 4 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 0, 832, 1280, 128 )
+
+[node name="les_platforms" type="Node2D" parent="."]
+
+[node name="platform" parent="les_platforms" instance=ExtResource( 7 )]
+position = Vector2( 3602, 788 )
+
+[node name="item" type="Node2D" parent="."]
+
+[node name="piece" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 1529, 262 )
+
+[node name="piece5" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 1601, 661 )
+
+[node name="piece4" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 167, -57 )
+
+[node name="piece3" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 3974, 137 )
+
+[node name="piece2" parent="item" instance=ExtResource( 8 )]
+position = Vector2( 1601, 258 )
+
+[node name="Potion" parent="item" instance=ExtResource( 9 )]
+position = Vector2( 3181, 230 )
+
+[node name="Potion2" parent="item" instance=ExtResource( 9 )]
+position = Vector2( 4051, 174 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 622 )
+
+[node name="groupe_ennemi" type="Node2D" parent="."]
+
+[node name="blop" parent="groupe_ennemi" instance=ExtResource( 3 )]
+position = Vector2( 2149, 747 )
+
+[node name="blop_2" parent="groupe_ennemi" instance=ExtResource( 3 )]
+position = Vector2( 3118, 230 )
+
+[node name="monstre_tournant" parent="groupe_ennemi" instance=ExtResource( 6 )]
+position = Vector2( 1360, -152 )
+
+[node name="monstre_tournant2" parent="groupe_ennemi" instance=ExtResource( 6 )]
+position = Vector2( 2060, -83 )
+
+[node name="cache_ennemi_lvl1" type="TileMap" parent="."]
+visible = false
+position = Vector2( 141, 388 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 48, 48 )
+collision_layer = 0
+collision_mask = 4
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( -655360, 2, 0, -327653, 2, 0, -262117, 2, 0, -262114, 2, 0, -262109, 3, 0, -262108, 3, 0, -262107, 3, 0, -262106, 3, 0, -262105, 3, 0, -262104, 3, 0, -196578, 2, 0, -196573, 3, 0, -196572, 3, 0, -196571, 3, 0, -196570, 3, 0, -196569, 3, 0, -196568, 3, 0, -131042, 2, 0, -65506, 2, 0, 30, 2, 0, 65566, 2, 0, 131102, 2, 0, 327711, 2, 0, 327745, 2, 0, 393247, 2, 0, 393281, 2, 0, 458783, 2, 0, 458817, 2, 0 )
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"game_over",
+]]
+position = Vector2( 2060, 1311 )
+input_pickable = false
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="finir_niveau" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4237, 118 )
+scale = Vector2( 2, 2 )
+input_pickable = false
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 3802, 140 )
+
+[node name="oeil" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2288, 622 )
+
+[node name="decor_desert" type="TileMap" parent="."]
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+collision_layer = 0
+collision_mask = 0
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( -786382, 0, 0, -589775, 3, 0, -327648, 4, 0, 131198, 0, 0, 262262, 5, 0, 327685, 7, 0, 327688, 2, 0, 393302, 8, 0, 655382, 8, 0, 720923, 7, 0, 1245216, 7, 0, 1245222, 7, 0, 1441797, 5, 0 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="finir_niveau" to="." method="_on_finir_niveau_body_entered"]

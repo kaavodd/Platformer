@@ -1,0 +1,182 @@
+[gd_scene load_steps=62 format=2]
+
+[ext_resource path="res://img/Player/Jump__007.png" type="Texture" id=1]
+[ext_resource path="res://img/Player/Jump__003.png" type="Texture" id=2]
+[ext_resource path="res://img/Player/Run__003.png" type="Texture" id=3]
+[ext_resource path="res://img/Player/Idle__000.png" type="Texture" id=4]
+[ext_resource path="res://img/Player/Run__008.png" type="Texture" id=5]
+[ext_resource path="res://img/Player/Idle__004.png" type="Texture" id=6]
+[ext_resource path="res://img/Player/Idle__008.png" type="Texture" id=7]
+[ext_resource path="res://img/Player/Idle__006.png" type="Texture" id=8]
+[ext_resource path="res://img/Player/Jump__004.png" type="Texture" id=9]
+[ext_resource path="res://img/Player/Jump__009.png" type="Texture" id=10]
+[ext_resource path="res://img/Player/Run__001.png" type="Texture" id=11]
+[ext_resource path="res://img/Player/Run__004.png" type="Texture" id=12]
+[ext_resource path="res://img/Player/Jump__001.png" type="Texture" id=13]
+[ext_resource path="res://img/Player/Jump__005.png" type="Texture" id=14]
+[ext_resource path="res://img/Player/Jump__008.png" type="Texture" id=15]
+[ext_resource path="res://img/Player/Jump__002.png" type="Texture" id=16]
+[ext_resource path="res://img/Player/Run__005.png" type="Texture" id=17]
+[ext_resource path="res://img/Player/Run__009.png" type="Texture" id=18]
+[ext_resource path="res://img/Player/Idle__005.png" type="Texture" id=19]
+[ext_resource path="res://img/Player/Jump__006.png" type="Texture" id=20]
+[ext_resource path="res://img/Player/Idle__007.png" type="Texture" id=21]
+[ext_resource path="res://img/Player/Idle__009.png" type="Texture" id=22]
+[ext_resource path="res://img/Player/Run__006.png" type="Texture" id=23]
+[ext_resource path="res://img/Player/Idle__001.png" type="Texture" id=24]
+[ext_resource path="res://img/Player/Run__002.png" type="Texture" id=25]
+[ext_resource path="res://img/Player/Jump__000.png" type="Texture" id=26]
+[ext_resource path="res://img/Player/Run__000.png" type="Texture" id=27]
+[ext_resource path="res://img/Player/Run__007.png" type="Texture" id=28]
+[ext_resource path="res://img/Player/Idle__002.png" type="Texture" id=29]
+[ext_resource path="res://img/Player/Idle__003.png" type="Texture" id=30]
+[ext_resource path="res://img/Player/Dead__003.png" type="Texture" id=31]
+[ext_resource path="res://img/Player/Slide__001.png" type="Texture" id=32]
+[ext_resource path="res://img/Player/Dead__001.png" type="Texture" id=33]
+[ext_resource path="res://img/Player/Dead__005.png" type="Texture" id=34]
+[ext_resource path="res://img/Player/Dead__006.png" type="Texture" id=35]
+[ext_resource path="res://img/Player/Dead__008.png" type="Texture" id=36]
+[ext_resource path="res://img/Player/Dead__004.png" type="Texture" id=37]
+[ext_resource path="res://img/Player/Dead__002.png" type="Texture" id=38]
+[ext_resource path="res://img/Player/Dead__000.png" type="Texture" id=39]
+[ext_resource path="res://img/Player/Slide__009.png" type="Texture" id=40]
+[ext_resource path="res://img/Player/Dead__007.png" type="Texture" id=41]
+[ext_resource path="res://img/Player/Dead__009.png" type="Texture" id=42]
+[ext_resource path="res://img/Player/Slide__000.png" type="Texture" id=43]
+[ext_resource path="res://img/Player/Slide__002.png" type="Texture" id=44]
+[ext_resource path="res://img/Player/Slide__003.png" type="Texture" id=45]
+[ext_resource path="res://img/Player/Slide__005.png" type="Texture" id=46]
+[ext_resource path="res://img/Player/Slide__006.png" type="Texture" id=47]
+[ext_resource path="res://img/Player/Slide__008.png" type="Texture" id=48]
+[ext_resource path="res://img/Player/Slide__004.png" type="Texture" id=49]
+[ext_resource path="res://img/Player/Slide__007.png" type="Texture" id=50]
+[ext_resource path="res://script/player.gd" type="Script" id=51]
+[ext_resource path="res://scene/interface.tscn" type="PackedScene" id=52]
+[ext_resource path="res://sound/Potion.wav" type="AudioStream" id=53]
+[ext_resource path="res://sound/piece.wav" type="AudioStream" id=54]
+[ext_resource path="res://sound/tir.wav" type="AudioStream" id=55]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 6 ), ExtResource( 19 ), ExtResource( 8 ), ExtResource( 21 ), ExtResource( 7 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 11 ), ExtResource( 25 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 5 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 1 ), ExtResource( 15 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 32 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 50 ), ExtResource( 48 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "Glisser",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 33 ), ExtResource( 38 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 42 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Tirer",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23, 41.8672 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 27, 44.2269 )
+
+[sub_resource type="AudioStreamRandomPitch" id=4]
+audio_stream = ExtResource( 53 )
+
+[sub_resource type="AudioStreamRandomPitch" id=5]
+audio_stream = ExtResource( 54 )
+
+[sub_resource type="AudioStreamRandomPitch" id=6]
+audio_stream = ExtResource( 55 )
+
+[node name="player" type="KinematicBody2D"]
+pause_mode = 2
+collision_mask = 21
+script = ExtResource( 51 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.166144, 0.173868 )
+frames = SubResource( 1 )
+animation = "idle"
+speed_scale = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.7, 1.7 )
+limit_left = -128
+limit_top = -512
+offset_v = -1.0
+
+[node name="Position" type="Position2D" parent="."]
+position = Vector2( 43, 18 )
+
+[node name="delais" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="delais2" type="Timer" parent="."]
+one_shot = true
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource( 3 )
+
+[node name="interface" parent="." instance=ExtResource( 52 )]
+
+[node name="ColorRect" parent="interface" index="2"]
+color = Color( 0, 0, 0, 0 )
+
+[node name="Label2" parent="interface/ColorRect" index="14"]
+visible = false
+
+[node name="Button" parent="interface/ColorRect" index="15"]
+visible = false
+
+[node name="sound" type="Node2D" parent="."]
+
+[node name="potion" type="AudioStreamPlayer" parent="sound"]
+stream = SubResource( 4 )
+volume_db = -39.517
+
+[node name="piece" type="AudioStreamPlayer2D" parent="sound"]
+stream = SubResource( 5 )
+volume_db = -33.503
+
+[node name="tir" type="AudioStreamPlayer" parent="sound"]
+stream = SubResource( 6 )
+volume_db = -38.222
+mix_target = 2
+[connection signal="timeout" from="delais" to="." method="_on_delais_timeout"]
+[connection signal="timeout" from="delais2" to="." method="_on_delais2_timeout"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="pressed" from="interface/ColorRect/Restart" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Continuer" to="." method="_on_Continuer_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Option" to="." method="_on_Option_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Quitter" to="." method="_on_Quitter_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Quitter2" to="." method="_on_Quitter_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Quitter-option" to="." method="_on_Quitteroption_pressed"]
+[connection signal="pressed" from="interface/ColorRect/Button" to="." method="_on_Quitter_pressed"]
+
+[editable path="interface"]
